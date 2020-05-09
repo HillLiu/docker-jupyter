@@ -7,4 +7,4 @@ services:
     volumes:
       - "${DATA:-./data}:/home/jovyan" 
     ports:
-      - "${WEB:-8888}:8888"
+      - "${WEB:-9988}:8888"
