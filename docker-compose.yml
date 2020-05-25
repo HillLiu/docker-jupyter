@@ -5,6 +5,6 @@ services:
     image: jupyter/datascience-notebook 
     command: ["start-notebook.sh", "--NotebookApp.token=''"]
     volumes:
-      - "${DATA:-./data}:/home/jovyan" 
+      - "${DATA:-./data}:/home/jovyan/work" 
     ports:
       - "${WEB:-9988}:8888"
