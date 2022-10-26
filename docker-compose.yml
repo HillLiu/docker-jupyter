@@ -1,9 +1,10 @@
-version: '3' 
+version: "3.9" 
 
 services:
   jupyter:
     image: jupyter/datascience-notebook 
     command: ["start-notebook.sh", "--NotebookApp.token=''"]
+    restart: always
     volumes:
       - "${DATA:-./data}:/home/jovyan/work" 
       - "${PASSWORD:-./jupyter_notebook_config.json}:/home/jovyan/.jupyter/jupyter_notebook_config.json" 
